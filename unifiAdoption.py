@@ -10,11 +10,11 @@ from smtplib import SMTP_SSL as SMTP
 from email.mime.text import MIMEText
 
 
-SMTPserver = 'mail.dcmcable.com'
-sender =     'ftth@dcmcable.com'
-destination = ['networkteam@otowfl.com']
-USERNAME = "ftth@dcmcable.com"
-PASSWORD = "0t0w1+FTTH"
+SMTPserver = 'smtpserver'
+sender =     'senderemail'
+destination = ['destinationemail']
+USERNAME = "email"
+PASSWORD = "password"
 
 #DHCP File to read in
 outListStringData = ""
@@ -77,7 +77,7 @@ outListStringData = outListStringData.split(",")
 
 #Pull mac address, IP, and hostname from outListStringData
 for item in outListStringData:
-    if "184.179" in item:
+    if "ipaddress" in item:
         indexOf = outListStringData.index(item)
         if "ftth.us" in outListStringData[indexOf - 1]:
             ipString = ipString + item
