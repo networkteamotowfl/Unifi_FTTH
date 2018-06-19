@@ -13,7 +13,7 @@ with open ("C:\\FTTH_FTP\\FTTH\\Out_List.csv", "r") as dhcpDataFile:
 
 
 for item in outListStringData:
-    if "184.179" in item:
+    if "ipaddress" in item:
         indexOf = outListStringData.index(item)
         if "ftth.us" in outListStringData[indexOf - 1]:
             ipString = ipString + item
